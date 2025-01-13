@@ -7,9 +7,15 @@
 </head>
 <body>
   <div style="text-align:center">
-    <button id="kiwify-upsell-trigger-h19tap2"
-      style="background-color:#5383ad;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #5383ad;font-size:20px;">Sim,
+    <button id="kiwify-upsell-trigger-oRA9f06"
+      style="background-color:#5383ad;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #5383ad;font-size:20px;"
+      onload="this.id = buttonId">Sim,
       eu aceito essa oferta especial!</button>
+    <script>
+      const linkId = new URLSearchParams(window.location.search).get('link-id') || ''; // Get link-id from query params
+      const button = document.getElementById('kiwify-upsell-trigger-oRA9f06');
+      button.id = linkId ? `kiwify-upsell-trigger-${linkId}` : 'kiwify-upsell-trigger-oRA9f06';
+    </script>
     <div id="kiwify-upsell-cancel-trigger"
       style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">Não, eu
       gostaria de recusar essa oferta</div>
